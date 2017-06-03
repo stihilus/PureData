@@ -1,0 +1,44 @@
+#N canvas 240 220 573 300 10;
+#X floatatom 37 53 5 0 0 0 - - -;
+#X floatatom 37 109 5 0 0 0 - - -;
+#X floatatom 172 108 5 0 0 0 - - -;
+#X obj 131 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 172 129 f;
+#X obj 172 150 select 0 1;
+#X obj 172 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 172 225 oneshot;
+#X msg 214 196 bang;
+#X msg 172 196 clear;
+#X obj 229 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 37 73 expr $f1 \; if ($f1 > 0.5 \, $f1 \, 0) \;;
+#X obj 172 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 378 116 print out1;
+#X msg 378 69 bang;
+#X obj 378 94 oneshot;
+#X msg 414 68 clear;
+#X text 37 33 ulazna vrednost;
+#X text 187 85 vece ili manje od 0.5;
+#X text 242 150 selekcija 0 ili 1;
+#X text 250 193 kada jednom ode preko 0.5 i bend se aktivira;
+#X text 250 208 sve dok ne padne ispod 0.5 i ne aktivira se clear;
+#X text 249 223 nemoguce je opet aktivirati bang;
+#X connect 0 0 11 0;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 2 10 0;
+#X connect 6 0 9 0;
+#X connect 7 0 12 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 8 0;
+#X connect 11 0 1 0;
+#X connect 11 1 2 0;
+#X connect 11 1 3 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;

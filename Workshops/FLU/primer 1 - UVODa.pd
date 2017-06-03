@@ -1,0 +1,13 @@
+#N canvas 288 433 332 259 10;
+#X obj 86 121 osc~;
+#X obj 89 80 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6600 1;
+#X obj 87 178 dac~;
+#X obj 87 155 *~;
+#X obj 131 123 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 1;

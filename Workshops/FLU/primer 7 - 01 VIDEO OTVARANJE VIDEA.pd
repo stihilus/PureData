@@ -1,0 +1,58 @@
+#N canvas 808 246 552 449 10;
+#X msg 69 33 create \, 1;
+#X msg 81 59 0 \, destroy;
+#X obj 69 104 gemwin;
+#X msg 98 83 dimen 320 240;
+#X obj 210 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 210 52 gemhead;
+#X obj 210 159 pix_film;
+#X obj 228 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 228 96 openpanel;
+#X msg 228 119 open \$1;
+#X obj 300 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 299 120 auto \$1;
+#X obj 312 182 unpack f f f;
+#X floatatom 312 204 5 0 0 0 - - -;
+#X floatatom 346 224 5 0 0 0 - - -;
+#X floatatom 381 224 5 0 0 0 - - -;
+#X obj 210 250 pix_texture;
+#X obj 210 290 translateXYZ;
+#X msg 256 269 0;
+#X obj 210 311 rectangle 6 4;
+#X obj 430 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 430 121 metro 50;
+#X obj 430 142 random 1000;
+#X floatatom 460 176 5 0 0 0 - - -;
+#X text 225 203 broj frejmova;
+#X text 280 225 rezolucija;
+#X text 79 359 [pix_image] - load in an image [pix_multiimage] - load
+in multiple images [pix_movie / pix_film] - load in a movie file [pix_video]
+- use a real time video source;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 16 0;
+#X connect 6 1 12 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 12 2 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 18 0 17 2;
+#X connect 18 0 17 3;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 6 1;
+#X connect 22 0 23 0;

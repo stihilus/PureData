@@ -1,0 +1,2 @@
+#N canvas 534 72 450 300 24;
+#X obj 107 86 sequencer~;

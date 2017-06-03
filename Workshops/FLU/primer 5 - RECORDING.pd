@@ -1,0 +1,66 @@
+#N canvas 368 75 312 246 10;
+#X obj 153 191 dac~;
+#N canvas 1359 250 450 300 q 0;
+#X floatatom 121 143 5 0 0 0 - - -;
+#X floatatom 163 143 5 0 0 0 - - -;
+#X obj 121 172 osc~;
+#X obj 99 199 *~;
+#X floatatom 163 198 5 0 0 0 - - -;
+#X obj 98 223 *~ 1;
+#X obj 97 112 readsf~;
+#X obj 91 50 inlet;
+#X obj 132 50 inlet;
+#X obj 173 50 inlet;
+#X obj 98 251 outlet~;
+#X msg 97 90 open loop.wav \, 1;
+#X obj 163 172 / 127;
+#X connect 0 0 2 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 10 0;
+#X connect 6 0 3 0;
+#X connect 7 0 11 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 11 0 6 0;
+#X connect 12 0 4 0;
+#X restore 153 169 pd q;
+#N canvas 857 279 450 300 record 0;
+#X obj 91 233 writesf~;
+#X obj 57 189 *~ 1;
+#X obj 58 161 adc~;
+#X msg 124 197 stop;
+#X obj 95 40 inlet;
+#X text 102 54 rec;
+#X obj 143 39 inlet;
+#X text 148 54 rec stop;
+#X msg 96 103 open loop.wav \, start;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 4 0 8 0;
+#X connect 6 0 3 0;
+#X connect 8 0 0 0;
+#X restore 68 169 pd record;
+#X obj 68 130 bng 32 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X obj 102 130 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 137 130 bng 32 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X obj 172 31 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 100 1;
+#X obj 190 31 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X text 65 110 rec;
+#X text 100 110 stop;
+#X text 135 110 play;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 1;
+#X connect 5 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 1 2;
