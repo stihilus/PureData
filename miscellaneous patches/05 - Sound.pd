@@ -1,0 +1,8 @@
+#N canvas 70 95 315 200 10;
+#X obj 33 95 dac~;
+#X obj 32 58 osc~ 450;
+#X floatatom 32 30 5 0 0 0 - - -;
+#X text 71 28 Pitch;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
