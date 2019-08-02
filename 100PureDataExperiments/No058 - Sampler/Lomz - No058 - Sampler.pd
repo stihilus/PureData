@@ -1,20 +1,20 @@
-#N canvas 90 70 1215 655 10;
-#N canvas -1787 415 1388 1063 play 0;
+#N canvas 18 151 1215 655 10;
+#N canvas 0 23 1388 814 play 0;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array L1 390696 float 2;
-#X coords 0 1 390696 -1 200 140 1 0 0;
+#X array L1 37440 float 2;
+#X coords 0 1 37440 -1 200 140 1 0 0;
 #X restore 373 30 graph;
 #X obj 201 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144
 -258113 -1;
 #X obj 201 32 vsl 26 60 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 800 1;
 #X obj 85 30 bng 26 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
 #X obj 85 70 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 85 105 bng 26 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
-#N canvas -1342 308 406 434 sound1 0;
+#N canvas 0 308 406 434 sound1 0;
 #X obj 71 213 writesf~;
 #X obj 37 169 *~ 1;
 #X obj 38 141 adc~;
@@ -23,7 +23,7 @@
 #X text 82 34 rec;
 #X obj 123 19 inlet;
 #X text 128 34 rec stop;
-#X msg 76 83 open dv01.wav \, start;
+#X msg 76 84 open sample01.wav \, start;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
@@ -44,7 +44,7 @@
 #X text 235 117 METRO;
 #X text 328 40 SPEED;
 #X text 328 29 Metro;
-#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 91 351 s play1;
 #X obj 91 374 s stop1;
@@ -96,7 +96,7 @@
 #X msg 50 298 0.5;
 #X obj 50 276 r start1;
 #X obj 43 39 vsl 40 102 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7500 1;
 #X text 44 144 Master;
 #X text 44 155 VOLUME;
 #N canvas 0 263 629 724 sound1 0;
@@ -123,13 +123,13 @@
 #X obj 68 423 snapshot~;
 #X floatatom 68 440 10 0 0 0 - - -;
 #X obj 60 603 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6014 1;
+-1 -1 14070 1;
 #X obj 83 461 r sampleSize;
 #X obj 68 487 /;
 #X obj 264 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 322 576 *~;
-#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
+#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 1
 1;
 #X obj 89 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130 -1
 -1;
@@ -145,8 +145,8 @@
 #X msg 309 88 stop;
 #X floatatom 236 353 5 0 0 0 - - -;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array R1 390696 float 2;
-#X coords 0 1 390696 -1 20 20 1 0 0;
+#X array R1 37440 float 2;
+#X coords 0 1 37440 -1 20 20 1 0 0;
 #X restore 416 416 graph;
 #X obj 72 202 metro 500;
 #X msg 248 287 1;
@@ -240,12 +240,12 @@
 #X obj 68 423 snapshot~;
 #X floatatom 68 440 10 0 0 0 - - -;
 #X obj 60 603 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 17193 1;
+-1 -1 4647 1;
 #X obj 68 487 /;
 #X obj 264 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 322 576 *~;
-#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
+#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 1
 1;
 #X obj 89 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130 -1
 -1;
@@ -261,8 +261,8 @@
 #X msg 309 88 stop;
 #X floatatom 236 353 5 0 0 0 - - -;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array R2 251490 float 2;
-#X coords 0 1 251490 -1 20 20 1 0 0;
+#X array R2 30656 float 2;
+#X coords 0 1 30656 -1 20 20 1 0 0;
 #X restore 518 119 graph;
 #X obj 72 202 metro 500;
 #X msg 248 287 1;
@@ -350,7 +350,7 @@
 #X obj 177 406 *~;
 #X obj 233 389 r sampleSize;
 #X obj 229 329 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7319 1;
 #X text 263 343 Dir/Speed;
 #X obj 315 292 f;
 #X text 283 248 Default Speed;
@@ -360,12 +360,12 @@
 #X obj 68 423 snapshot~;
 #X floatatom 68 440 10 0 0 0 - - -;
 #X obj 60 603 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 11280 1;
+-1 -1 333 1;
 #X obj 68 487 /;
 #X obj 209 65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 322 576 *~;
-#X obj 219 517 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
+#X obj 219 517 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 1
 1;
 #X obj 89 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130 -1
 -1;
@@ -381,8 +381,8 @@
 #X msg 309 88 stop;
 #X floatatom 236 353 5 0 0 0 - - -;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array R3 352800 float 2;
-#X coords 0 1 352800 -1 20 20 1 0 0;
+#X array R3 32128 float 2;
+#X coords 0 1 32128 -1 20 20 1 0 0;
 #X restore 518 119 graph;
 #X obj 72 202 metro 500;
 #X msg 248 287 1;
@@ -470,7 +470,7 @@
 #X obj 177 406 *~;
 #X obj 233 389 r sampleSize;
 #X obj 229 329 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6858 1;
 #X text 263 343 Dir/Speed;
 #X obj 315 292 f;
 #X text 283 248 Default Speed;
@@ -480,12 +480,12 @@
 #X obj 68 423 snapshot~;
 #X floatatom 68 440 10 0 0 0 - - -;
 #X obj 60 603 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3746 1;
+-1 -1 19400 1;
 #X obj 68 487 /;
 #X obj 264 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 322 576 *~;
-#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
+#X obj 185 513 tgl 15 0 empty empty empty 17 7 0 10 -204800 -1 -1 1
 1;
 #X obj 89 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130 -1
 -1;
@@ -501,8 +501,8 @@
 #X msg 309 88 stop;
 #X floatatom 236 353 5 0 0 0 - - -;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array R4 984911 float 2;
-#X coords 0 1 984911 -1 20 20 1 0 0;
+#X array R4 35328 float 2;
+#X coords 0 1 35328 -1 20 20 1 0 0;
 #X restore 518 119 graph;
 #X obj 72 202 metro 500;
 #X msg 248 287 1;
@@ -708,15 +708,15 @@ during recording;
 #X connect 10 0 1 0;
 #X coords 0 -1 1 1 300 160 2 20 20;
 #X restore 39 432 pd play;
-#N canvas -1786 413 1388 1063 play 0;
+#N canvas 0 24 1388 813 play 0;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array L2 251490 float 2;
-#X coords 0 1 251490 -1 200 140 1 0 0;
+#X array L2 30656 float 2;
+#X coords 0 1 30656 -1 200 140 1 0 0;
 #X restore 373 30 graph;
 #X obj 201 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144
 -258113 -1;
 #X obj 201 32 vsl 26 60 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 1700 1;
 #X obj 85 30 bng 26 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
 #X obj 85 70 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -736,7 +736,7 @@ during recording;
 #X text 235 117 METRO;
 #X text 328 40 SPEED;
 #X text 328 29 Metro;
-#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 456 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -755,7 +755,7 @@ during recording;
 #X text 235 142 NORMAL;
 #X text 300 124 ___;
 #X text 330 107 SAMPLE;
-#N canvas -1342 308 406 434 sound2 0;
+#N canvas 0 308 406 434 sound2 0;
 #X obj 71 213 writesf~;
 #X obj 37 169 *~ 1;
 #X obj 38 141 adc~;
@@ -764,7 +764,7 @@ during recording;
 #X text 82 34 rec;
 #X obj 123 19 inlet;
 #X text 128 34 rec stop;
-#X msg 76 83 open dv02.wav \, start;
+#X msg 76 83 open sample02.wav \, start;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
@@ -799,15 +799,15 @@ during recording;
 #X connect 43 0 5 0;
 #X coords 0 -1 1 1 565 160 2 20 20;
 #X restore 34 201 pd play;
-#N canvas -1786 413 1388 1063 play 0;
+#N canvas 0 23 1388 814 play 0;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array L3 352800 float 2;
-#X coords 0 1 352800 -1 200 140 1 0 0;
+#X array L3 32128 float 2;
+#X coords 0 1 32128 -1 200 140 1 0 0;
 #X restore 373 30 graph;
 #X obj 201 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144
 -258113 -1;
 #X obj 201 32 vsl 26 60 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 3900 1;
 #X obj 85 30 bng 26 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
 #X obj 85 70 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -819,7 +819,7 @@ during recording;
 #X obj 299 32 vsl 26 60 100 2000 0 0 empty empty empty 0 -9 0 10 -262144
 -258113 -66577 0 1;
 #X obj 299 107 vsl 26 60 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 3414 1;
 #X obj 85 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 235 156 SPEED;
@@ -827,7 +827,7 @@ during recording;
 #X text 235 117 METRO;
 #X text 328 40 SPEED;
 #X text 328 29 Metro;
-#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 456 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -846,7 +846,7 @@ during recording;
 #X text 235 142 NORMAL;
 #X text 300 124 ___;
 #X text 330 107 SAMPLE;
-#N canvas -1342 308 406 434 sound3 0;
+#N canvas 0 308 406 434 sound3 0;
 #X obj 71 213 writesf~;
 #X obj 37 169 *~ 1;
 #X obj 38 141 adc~;
@@ -855,7 +855,7 @@ during recording;
 #X text 82 34 rec;
 #X obj 123 19 inlet;
 #X text 128 34 rec stop;
-#X msg 76 83 open dv03.wav \, start;
+#X msg 76 83 open sample03.wav \, start;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
@@ -890,15 +890,15 @@ during recording;
 #X connect 43 0 5 0;
 #X coords 0 -1 1 1 565 160 2 20 20;
 #X restore 612 31 pd play;
-#N canvas -1611 664 1388 1063 play 0;
+#N canvas 0 23 1388 814 play 0;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array L4 984911 float 2;
-#X coords 0 1 984911 -1 200 140 1 0 0;
+#X array L4 35328 float 2;
+#X coords 0 1 35328 -1 200 140 1 0 0;
 #X restore 373 30 graph;
 #X obj 201 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144
 -258113 -1;
 #X obj 201 32 vsl 26 60 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 5900 1;
 #X obj 85 30 bng 26 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
 #X obj 85 70 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -906,11 +906,11 @@ during recording;
 #X obj 85 105 bng 26 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X obj 201 105 tgl 26 0 empty empty empty 17 7 0 10 -262144 -258113
--1 0 1;
+-1 1 1;
 #X obj 299 32 vsl 26 60 100 2000 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 4400 1;
 #X obj 299 107 vsl 26 60 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
--258113 -66577 0 1;
+-258113 -66577 3186 1;
 #X obj 85 144 bng 26 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 235 156 SPEED;
@@ -918,7 +918,7 @@ during recording;
 #X text 235 117 METRO;
 #X text 328 40 SPEED;
 #X text 328 29 Metro;
-#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 34 30 tgl 26 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 456 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -937,7 +937,7 @@ during recording;
 #X text 235 142 NORMAL;
 #X text 300 124 ___;
 #X text 330 107 SAMPLE;
-#N canvas -1835 1180 406 434 sound4 0;
+#N canvas 0 403 406 434 sound4 0;
 #X obj 71 213 writesf~;
 #X obj 37 169 *~ 1;
 #X obj 38 141 adc~;
@@ -946,7 +946,7 @@ during recording;
 #X text 82 34 rec;
 #X obj 123 19 inlet;
 #X text 128 34 rec stop;
-#X msg 76 83 open dv04.wav \, start;
+#X msg 76 83 open sample04.wav \, start;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
